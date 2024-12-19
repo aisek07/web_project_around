@@ -1,0 +1,63 @@
+.popup {
+}
+
+.popup__title {
+  color: rgb(0, 0, 0);
+  width: 330px;
+  height: 23px;
+  font-family: "Inter";
+  font-weight: 900;
+  line-height: 29.05px;
+  padding-top: 34px;
+  padding-left: 36px;
+}
+.popup__form-container {
+  width: 430px;
+  height: 330px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.popup__close-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin-left: auto;
+}
+
+.popup__close-button {
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  background-color: blue;
+}
+
+.popup__form {
+  padding-left: 36px;
+  padding-bottom: 36px;
+}
+
+.popup__text {
+  color: black;
+  width: 358px;
+  height: 27.26px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popup__button {
+  width: 358px;
+  height: 50.15px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+}
