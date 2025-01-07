@@ -1,4 +1,5 @@
 .popup {
+  display: none;
 }
 
 .popup__title {
@@ -16,6 +17,7 @@
   height: 330px;
   background-color: white;
   border-radius: 10px;
+  position: relative;
 }
 
 .popup__close-btn {
@@ -30,6 +32,11 @@
   height: 40px;
   margin-right: auto;
   background-color: blue;
+  margin-left: auto;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background-color: transparent;
 }
 
 .popup__form {
@@ -42,13 +49,14 @@
   width: 358px;
   height: 27.26px;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(176, 172, 172);
   font-family: "Inter";
   font-weight: 400;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 29.74px;
 }
 
 .popup__button {
@@ -60,4 +68,5 @@
   font-family: "Inter";
   font-weight: 400;
   font-size: 18px;
+  margin-top: 48px;
 }
