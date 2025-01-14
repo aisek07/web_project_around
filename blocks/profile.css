@@ -45,6 +45,14 @@
   background-color: black;
   width: 24px;
   height: 24px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.profile__button-edit:hover {
+  cursor: pointer;
+  opacity: 60%;
 }
 
 .profile__explore {
@@ -61,4 +69,9 @@
 .profile__button-add {
   margin-left: auto;
   background-color: black;
+}
+
+.profile__button-add:hover {
+  cursor: pointer;
+  opacity: 60%;
 }
