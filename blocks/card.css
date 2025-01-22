@@ -50,16 +50,19 @@
   max-width: 246px;
   padding-left: 21px;
   padding-right: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card {
   margin: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 282px);
     justify-content: center;
   }
   .card-grid__image {
@@ -72,11 +75,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-  .card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+@media screen and (max-width: 540px) {
   .card-grid__image {
     width: 282px;
     height: 282px;
