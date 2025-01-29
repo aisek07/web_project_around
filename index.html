@@ -33,7 +33,7 @@
             <div class="profile__container-title-and-button">
               <h1 class="profile__title">Jacques Cousteau</h1>
               <img
-                src="./images/Edit Button.png"
+                src="./images/EditButton.png"
                 alt="Ícone"
                 class="profile__button-edit"
                 onclick="addbutton()"
@@ -43,12 +43,12 @@
           </div>
 
           <img
-            src="./images/Add Button.png"
+            src="./images/AddButton.png"
             alt="botão adicionar"
             class="profile__button-add"
           />
         </section>
-        
+
         <section class="card-container">
           <div class="card__grid">
             <img
@@ -149,19 +149,31 @@
       <div class="popup" id="popup">
         <div class="popup__form-container">
           <h2 class="popup__title">Editar perfil</h2>
-          <button class="popup__close-btn" onclick="hidePopup()"> 
-        <img
-      src="./images/Close Icon.png"
-      alt="botao fechar"
-      class="popup__close-button">
-    </button>
-     
+          <button class="popup__close-btn" onclick="hidePopup()">
+            <img
+              src="./images/CloseIcon.png"
+              alt="botao fechar"
+              class="popup__close-button"
+            />
+          </button>
+
           <form class="popup__form">
-          <input class="popup__text" id="input1" placeholder="Jacques Cousteau" required>
-          <input class="popup__text" id="input2" placeholder="Explorador" required>
-          <button class="popup__button" onclick="saveData()">Salvar</button>
+            <input
+              class="popup__text"
+              id="input1"
+              placeholder="Jacques Cousteau"
+              required
+            />
+            <input
+              class="popup__text"
+              id="input2"
+              placeholder="Explorador"
+              required
+            />
+            <button class="popup__button" onclick="saveData()">Salvar</button>
           </form>
         </div>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>
