@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EUA Afora</title>
+    <meta
+      name="description"
+      content="Uma página interativa onde os usuários podem adicionar, remover, ou curtir fotos."
+    />
+    <meta name="author" content="Késia Letícia" />
+    <meta
+      name="keywords"
+      content="metadados, VSNExplorer, automação, dados, eficiência, produtividade"
+    />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/Vector.png"
+          alt="logotipo Around"
+          class="header__logo"
+        />
+      </header>
+      <main class="content">
+        <section class="profile">
+          <img src="./images/Avatar.png" alt="Avatar" class="profile__image" />
+          <div class="profile__intro">
+            <div class="profile__container-title-and-button">
+              <h1 class="profile__title">Jacques Cousteau</h1>
+              <img
+                src="./images/EditButton.png"
+                alt="Ícone"
+                class="profile__button-edit"
+                onclick="addbutton()"
+              />
+            </div>
+            <p class="profile__explore">Explorador</p>
+          </div>
+
+          <img
+            src="./images/AddButton.png"
+            alt="botão adicionar"
+            class="profile__button-add"
+          />
+        </section>
+
+        <section class="card">
+          <div class="card__grid">
+            <img
+              src="./images/img01.jpg"
+              alt="imagem item 1"
+              class="card__grid-image"
+            />
+            <div class="card__name">
+              <p class="card__description">Vale de Yosemite</p>
+              <img
+                src="./images/Vectorlike.png"
+                alt="like"
+                class="card__like"
+              />
+            </div>
+          </div>
+
+          <div class="card__grid">
+            <img
+              src="./images/img02.png"
+              alt="imagem item 2"
+              class="card__grid-image"
+            />
+            <div class="card__name">
+              <p class="card__description">Lago Louise</p>
+              <img
+                src="./images/Vectorlike.png"
+                alt="like"
+                class="card__like"
+              />
+            </div>
+          </div>
+          <div class="card__grid">
+            <img
+              src="./images/img03.png"
+              alt="imagem item 3"
+              class="card__grid-image"
+            />
+            <div class="card__name">
+              <p class="card__description">Montanhas Care...</p>
+              <img
+                src="./images/Vectorlike.png"
+                alt="like"
+                class="card__like"
+              />
+            </div>
+          </div>
+          <div class="card__grid">
+            <img
+              src="./images/img04.png"
+              alt="imagem item 4"
+              class="card__grid-image"
+            />
+            <div class="card__name">
+              <p class="card__description">Latemar</p>
+              <img
+                src="./images/Vectorlike.png"
+                alt="like"
+                class="card__like"
+              />
+            </div>
+          </div>
+          <div class="card__grid">
+            <img
+              src="./images/iimg05.png"
+              alt="imagem item 5"
+              class="card__grid-image"
+            />
+            <div class="card__name">
+              <p class="card__description">Parque Nacional...</p>
+              <img
+                src="./images/Vectorlike.png"
+                alt="like"
+                class="card__like"
+              />
+            </div>
+          </div>
+          <div class="card__grid">
+            <img
+              src="./images/img06.png"
+              alt="imagem item 6"
+              class="card__grid-image"
+            />
+            <div class="card__name">
+              <p class="card__description">Lago di Braies</p>
+              <img
+                src="./images/Vectorlike.png"
+                alt="like"
+                class="card__like"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2024 Around The U.S.</p>
+      </footer>
+      <div class="popup" id="popup">
+        <div class="popup__form-container">
+          <h2 class="popup__title">Editar perfil</h2>
+          <button class="popup__close-btn" onclick="hidePopup()">
+            <img
+              src="./images/CloseIcon.png"
+              alt="botao fechar"
+              class="popup__close-button"
+            />
+          </button>
+
+          <form class="popup__form">
+            <input
+              class="popup__text"
+              id="input1"
+              placeholder="Jacques Cousteau"
+              required
+            />
+            <input
+              class="popup__text"
+              id="input2"
+              placeholder="Explorador"
+              required
+            />
+            <button class="popup__button" type="submit" >Salvar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script defer src="./scripts/index.js"></script>
+  </body>
+</html>

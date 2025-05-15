@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  align-items: flex-start;
+  max-width: 940px;
+  width: 100%;
+  margin-top: 67px;
+  margin-bottom: 60px;
+}
+
+.footer__copyright {
+  color: #545454;
+  text-align: center;
+  text-align: left;
+  font-family: "Inter";
+  margin: 0;
+  padding: 0;
+}

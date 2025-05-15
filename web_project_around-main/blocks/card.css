@@ -1,0 +1,83 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 17px;
+  align-items: center;
+}
+
+.card__name {
+  background-color: #ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card__grid-image {
+  width: 300px;
+  height: 282px;
+}
+
+.card__like {
+  width: 21px;
+  height: 19px;
+  padding-right: 18px;
+}
+
+.card__like:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.card__like:active {
+  color: black;
+}
+
+.card__grid {
+  margin: 0 none;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__description {
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  max-width: 246px;
+  padding-left: 21px;
+  padding-right: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 282px);
+    justify-content: center;
+  }
+  .card__grid-image {
+    width: 282px;
+    height: 282px;
+  }
+  .card__grid {
+    width: 282px;
+    height: 361px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .card__grid-image {
+    width: 282px;
+    height: 282px;
+  }
+  .card__grid {
+    width: 282px;
+    height: 361px;
+  }
+}

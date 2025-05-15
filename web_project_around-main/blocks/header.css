@@ -1,0 +1,24 @@
+.header {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  max-width: 880px;
+  width: 100%;
+}
+
+.header__logo {
+  margin-top: 45px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    width: 156px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .header__logo {
+    width: 126px;
+    height: 24px;
+  }
+}
