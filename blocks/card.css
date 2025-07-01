@@ -4,6 +4,7 @@
   column-gap: 20px;
   row-gap: 17px;
   align-items: center;
+
 }
 
 .card__name {
@@ -19,26 +20,49 @@
   width: 300px;
   height: 282px;
 }
+.card__delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
 
-.card__like {
+.card__delete:hover{
+   cursor: pointer;
+  opacity: 50%;
+}
+
+.card__delete:active{
+  color: black;
+}
+
+.card__button{
   width: 21px;
   height: 19px;
   padding-right: 18px;
+  background-image: url("../images/Vectorlike.png");
+  background-repeat: no-repeat;
+  border: none;
 }
 
-.card__like:hover {
+.card__button:hover {
   cursor: pointer;
   opacity: 50%;
 }
 
-.card__like:active {
-  color: black;
+
+.card__button.liked {
+  
+  background-image: url("../images/Union.png");
 }
 
 .card__grid {
   margin: 0 none;
   display: flex;
   flex-direction: column;
+    position: relative;
 }
 
 .card__description {
@@ -54,6 +78,77 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+
+
+.card-popup {
+  position: fixed; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000; padding: 1rem;
+  display: none;
+}
+
+.card-popup__container {
+  background: #fff; padding: 1.5rem;
+    max-width: 400px;
+ 
+  z-index: 1001; 
+  width: 430px;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+}
+.card-popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.card-popup__btn-close{
+
+    border: none;
+  background-color: black;
+  outline: none;
+  margin-left: auto;
+}
+
+.card-popup__title{
+  color: rgb(0, 0, 0);
+    width: 330px;
+    height: 23px;
+    font-family: "Inter";
+    font-weight: 900;
+    line-height: 29.05px;
+    padding-top: 34px;
+    padding-left: 36px;
+ 
+}
+
+.card-popup__form { display: flex; flex-direction: column; gap: 1rem; }
+.card-popup__input {
+  padding: .5rem; border: 1px solid #ccc; border-radius: 4px;
+}
+.card-popup__submit {
+  width: 358px;
+  height: 50.15px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 48px;
+}
+
+
+.card-popup__submit:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
 
 @media screen and (max-width: 1024px) {
   .card {
