@@ -86,7 +86,7 @@ const toggleButtonState = (inputList, buttonElement) => {
   }
 };
 
-const setEventListeners = (formElement) => {
+const validacaoFormulario = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(".popup__text"));
   const buttonElement = formElement.querySelector(".popup__submit");
 console.log(inputList)
@@ -105,17 +105,17 @@ console.log(inputList)
 const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(".popup__form"));
   formList.forEach((formElement) => {
-    formElement.addEventListener("submit", function (evt) {
+    formElement.addEventListener("input", function (evt) {
       evt.preventDefault();
       console.log("oi")
-      setEventListeners(formElement);
+      
+      validacaoFormulario(formElement);
     });
    
   });
 };
 
 enableValidation();
-
 
 // validacao input 
 
@@ -191,8 +191,14 @@ addCardBtn.addEventListener('click', () => {
   cardPopup.classList.add('popup_opened');
   cardForm.reset();
   // updateSubmitState();
+
+    validarTodosFormularios();
 });
 
+const validarTodosFormularios = () => {
+    const formList = Array.from(document.querySelectorAll(".popup__form"));
+    validacaoFormulario(formElement);
+}
 
 
 initialCards.forEach(card => {
