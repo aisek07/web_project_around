@@ -62,7 +62,7 @@
             />
           </button>
 
-          <form class="popup__form">
+          <form class="popup__form" id="formulario_perfil" >
             <input
               class="popup__text"
               id="input1"
@@ -77,7 +77,7 @@
               minlength="2" maxlength="200"
               required
             />
-            <button class="popup__button" type="submit" >Salvar</button>
+            <button class="popup__submit" type="submit" >Salvar</button>
           </form>
         </div>
       </div>
@@ -94,21 +94,23 @@
             />
           </button>
     <h2 class="card-popup__title">Novo Local</h2>
-    <form class="card-popup__form" id="cardForm">
+    <form class="popup__form" id="cardForm">
 
        <input
               class="popup__text"
               id="input3"
               placeholder="Título"
-              required
-            />
+              required/>
+              <p class="input3-error">Preencha esse campo.</p>
+            
             <input
               class="popup__text"
               id="input4"
               placeholder="Link de imagem"
-              required
-            />
-      <button type="submit" class="card-popup__submit button--disabled" 
+              required/>
+              <p class="input4-error">Por favor, insira um endereço web.</p>
+            
+      <button type="submit" class="popup__submit" 
       id="image_submit"
 >Criar</button>
 

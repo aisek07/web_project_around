@@ -54,6 +54,8 @@ const showInputError = (formElement, inputElement, errorMessage) => {
   errorElement.classList.add("form__input-error_active");
 };
 
+
+// criar no html paragrafo com classes input 1 , 2 error//
 const hideInputError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.remove("form__input_type_error");
@@ -85,9 +87,9 @@ const toggleButtonState = (inputList, buttonElement) => {
 };
 
 const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(".form__input"));
-  const buttonElement = formElement.querySelector(".form__submit");
-
+  const inputList = Array.from(formElement.querySelectorAll(".popup__text"));
+  const buttonElement = formElement.querySelector(".popup__submit");
+console.log(inputList)
   // Aqui, para verificar o estado do botão no início:
   toggleButtonState(inputList, buttonElement);
 
@@ -101,17 +103,14 @@ const setEventListeners = (formElement) => {
 };
 
 const enableValidation = () => {
-  const formList = Array.from(document.querySelectorAll(".form"));
+  const formList = Array.from(document.querySelectorAll(".popup__form"));
   formList.forEach((formElement) => {
     formElement.addEventListener("submit", function (evt) {
       evt.preventDefault();
+      console.log("oi")
+      setEventListeners(formElement);
     });
-
-    const fieldsetList = Array.from(formElement.querySelectorAll(".form__set"));
-
-    fieldsetList.forEach((fieldset) => {
-      setEventListeners(fieldset);
-    });
+   
   });
 };
 
@@ -269,9 +268,3 @@ function saveImage(e) {
 }
 
 formCreateCard.addEventListener('submit', saveImage);
-
-
-// validar input//
-formInput.addEventListener("input", function (evt) {
-console.log(evt.target.validity);
-});
