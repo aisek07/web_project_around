@@ -46,79 +46,6 @@ const cardPopupSubmit = document.querySelector("#image_submit");
 console.log(formCreateCard)
 
 
-// mensagem de erro//
-const showInputError = (formElement, inputElement, errorMessage) => {
-  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-  inputElement.classList.add("form__input_type_error");
-  errorElement.textContent = errorMessage;
-  errorElement.classList.add("form__input-error_active");
-};
-
-
-// criar no html paragrafo com classes input 1 , 2 error//
-const hideInputError = (formElement, inputElement) => {
-  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-  inputElement.classList.remove("form__input_type_error");
-  errorElement.classList.remove("form__input-error_active");
-  errorElement.textContent = "";
-};
-
-const checkInputValidity = (formElement, inputElement) => {
-  if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage);
-  } else {
-    hideInputError(formElement, inputElement);
-  }
-};
-
-const hasInvalidInput = (inputList) => {
-  return inputList.some((inputElement) => {
-    return !inputElement.validity.valid;
-  });
-};
-
-const toggleButtonState = (inputList, buttonElement) => {
-  console.log(hasInvalidInput(inputList));
-  if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add("button_inactive");
-  } else {
-    buttonElement.classList.remove("button_inactive");
-  }
-};
-
-const validacaoFormulario = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(".popup__text"));
-  const buttonElement = formElement.querySelector(".popup__submit");
-console.log(inputList)
-  // Aqui, para verificar o estado do botão no início:
-  toggleButtonState(inputList, buttonElement);
-
-  inputList.forEach((inputElement) => {
-    inputElement.addEventListener("input", function () {
-      checkInputValidity(formElement, inputElement);
-      // E aqui, para verificar sempre que qualquer entrada de campo for alterada:
-      toggleButtonState(inputList, buttonElement);
-    });
-  });
-};
-
-const enableValidation = () => {
-  const formList = Array.from(document.querySelectorAll(".popup__form"));
-  formList.forEach((formElement) => {
-    formElement.addEventListener("input", function (evt) {
-      evt.preventDefault();
-      console.log("oi")
-      
-      validacaoFormulario(formElement);
-    });
-   
-  });
-};
-
-enableValidation();
-
-// validacao input 
-
 
 
 openBtn.addEventListener('click', () => {
@@ -193,11 +120,25 @@ addCardBtn.addEventListener('click', () => {
   // updateSubmitState();
 
     validarTodosFormularios();
+
 });
+
+
+var popup = document.querySelectorAll('.popup_g');
+
+// fechar popup com esc ou clicando fora do popup 
+const fecharpopup = () => {
+  popup.classList.remove('popup_opened');
+}
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && popup.classList.contains('popup_opened')) {
+    fecharpopup();
+  } });
 
 const validarTodosFormularios = () => {
     const formList = Array.from(document.querySelectorAll(".popup__form"));
-    validacaoFormulario(formElement);
+    //validacaoFormulario(formElement);
+    console.log("validarTodosFormularios chamado");
 }
 
 

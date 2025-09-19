@@ -51,7 +51,7 @@
       <footer class="footer">
         <p class="footer__copyright">© 2024 Around The U.S.</p>
       </footer>
-      <div class="popup" id="popup">
+      <div class="popup popup_g" id="popup">
         <div class="popup__form-container">
           <h2 class="popup__title">Editar perfil</h2>
           <button class="popup__close-button " >
@@ -68,20 +68,23 @@
               id="input1"
               placeholder="Jacques Cousteau"
               required
-            />
+              minlength="2" maxlength="40"
+
+            /><p class="input1-error">Preencha esse campo.</p>
             <input
               class="popup__text"
               id="input2"
               placeholder="Explorador"
               required
-            />
+              minlength="2" maxlength="200"
+            /><p class="input2-error">Preencha esse campo.</p>
             <button class="popup__submit" type="submit" >Salvar</button>
           </form>
         </div>
       </div>
     </div>
 
- <div class="card-popup " id="cardPopup">
+ <div class="card-popup popup_g " id="cardPopup">
   <div class="card-popup__overlay"></div>
   <div class="card-popup__container">
    <button class="popup__close-button" >
@@ -98,14 +101,18 @@
               class="popup__text"
               id="input3"
               placeholder="Título"
-              required/>
+              required
+              minlength="2" maxlength="30"
+              />
               <p class="input3-error">Preencha esse campo.</p>
             
             <input
               class="popup__text"
               id="input4"
               placeholder="Link de imagem"
-              required/>
+              required
+              type="url"
+              />
               <p class="input4-error">Por favor, insira um endereço web.</p>
             
       <button type="submit" class="popup__submit" 
@@ -153,5 +160,6 @@
           </div>
 </template>
     <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/validate.js"> </script> 
   </body>
 </html>
