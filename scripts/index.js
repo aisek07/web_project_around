@@ -123,17 +123,34 @@ addCardBtn.addEventListener('click', () => {
 
 });
 
+// fechar popup com esc 
+var listaPopup = document.querySelectorAll('.popup_g , .overlay');
 
-var popup = document.querySelectorAll('.popup_g');
-
-// fechar popup com esc ou clicando fora do popup 
-const fecharpopup = () => {
-  popup.classList.remove('popup_opened');
+const fecharpopup = (item) => {
+  item.classList.remove('popup_opened');
 }
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && popup.classList.contains('popup_opened')) {
-    fecharpopup();
+  if (event.key === 'Escape' )  {
+    listaPopup.forEach((item) => {
+      if (item.classList.contains('popup_opened')) {
+        fecharpopup(item)
+      }
+    });
   } });
+  
+//fechar popup clicando fora do popup
+
+listaPopup.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    console.log(event.target)
+    if (event.target === event.currentTarget) {
+      
+      fecharpopup(item)
+    } });
+});
+
+
+
 
 const validarTodosFormularios = () => {
     const formList = Array.from(document.querySelectorAll(".popup__form"));
